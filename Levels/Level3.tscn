@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://betqvfyxjihfp"]
+[gd_scene load_steps=14 format=3 uid="uid://betqvfyxjihfp"]
 
 [ext_resource type="Texture2D" uid="uid://g5gthcwiwq6x" path="res://cave_tileset1.png" id="1_jf7rg"]
 [ext_resource type="Texture2D" uid="uid://bja4bx035jwsi" path="res://Assets/tilesheet_complete_2X.png" id="2_4frh1"]
 [ext_resource type="Script" path="res://StateMachine/Player_Container.gd" id="3_66uwx"]
 [ext_resource type="Script" path="res://Camera.gd" id="4_lhw4n"]
 [ext_resource type="PackedScene" uid="uid://dhidbv05dsn63" path="res://Enemies/mud_shack.tscn" id="5_4brbi"]
+[ext_resource type="Script" path="res://Exit_to_2.gd" id="5_5c67u"]
+[ext_resource type="Texture2D" uid="uid://ivg5g4pgsqvu" path="res://Assets/portal_end.png" id="6_st1jk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvs8y"]
 texture = ExtResource("1_jf7rg")
@@ -4547,8 +4549,23 @@ script = ExtResource("3_66uwx")
 zoom = Vector2(0.3, 0.3)
 script = ExtResource("4_lhw4n")
 
+[node name="Exit_to_4" type="Area2D" parent="."]
+script = ExtResource("5_5c67u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit_to_4"]
+position = Vector2(7298, 2397)
+scale = Vector2(3.005, 2.125)
+texture = ExtResource("6_st1jk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit_to_4"]
+position = Vector2(7298, 2493)
+scale = Vector2(2.0625, 2.0625)
+polygon = PackedVector2Array(-0.000244141, 15.5152, 31.03, -15.5151, 15.5149, -77.5758, -15.5154, -93.0909, -31.0305, -62.0606, -31.0305, 0)
+
 [node name="Enemy_Container" type="Node2D" parent="."]
 
 [node name="MudShack" parent="Enemy_Container" instance=ExtResource("5_4brbi")]
 position = Vector2(3543, 1896)
 scale = Vector2(9.82, 9.82)
+
+[connection signal="body_entered" from="Exit_to_4" to="Exit_to_4" method="_on_body_entered"]

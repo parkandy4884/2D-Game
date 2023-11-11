@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccoknx34mkofc"]
+
+[ext_resource type="Texture2D" uid="uid://bfuxhmlvf084e" path="res://Startmenu.png" id="1_a5aps"]
+[ext_resource type="Script" path="res://Start.gd" id="1_ccxdd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccxdd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+texture = ExtResource("1_a5aps")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 800.0
+offset_top = 390.085
+offset_right = 1024.0
+offset_bottom = 454.085
+theme_override_font_sizes/font_size = 35
+text = "Play"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 224.0
+offset_top = 177.005
+offset_right = 448.0
+offset_bottom = 241.005
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
