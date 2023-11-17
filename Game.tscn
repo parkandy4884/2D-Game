@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d32g6ub2xg53j"]
+[gd_scene load_steps=19 format=3 uid="uid://d32g6ub2xg53j"]
 
 [ext_resource type="Script" path="res://Camera.gd" id="2"]
 [ext_resource type="Script" path="res://Exit_to_2.gd" id="3_s7iqd"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfndib6qohchy" path="res://Assets/portal_start.png" id="6_nr6fd"]
 [ext_resource type="PackedScene" uid="uid://dgcvbrqkeab0v" path="res://Enemies/frog.tscn" id="9_plra8"]
 [ext_resource type="PackedScene" uid="uid://sy5m02oihsht" path="res://Enemies/frog_2.tscn" id="9_tyn32"]
+[ext_resource type="PackedScene" uid="uid://c3dtg3fth0whm" path="res://UI/Menu.tscn" id="11_2gymp"]
 [ext_resource type="Script" path="res://StateMachine/Player_Container.gd" id="12"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_drk7j"]
@@ -1037,5 +1038,9 @@ script = ExtResource("2")
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="."]
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_ci381")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="UI" instance=ExtResource("11_2gymp")]
 
 [connection signal="body_entered" from="Exit_to_2" to="Exit_to_2" method="_on_body_entered"]

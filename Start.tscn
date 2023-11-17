@@ -17,6 +17,7 @@ position = Vector2(576, 320)
 texture = ExtResource("1_a5aps")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 800.0
 offset_top = 390.085
 offset_right = 1024.0

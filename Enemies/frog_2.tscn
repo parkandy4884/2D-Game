@@ -154,6 +154,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekiou"]
+radius = 19.23
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cka1v"]
 size = Vector2(20, 32)
@@ -167,13 +168,12 @@ sprite_frames = SubResource("SpriteFrames_bfmoa")
 animation = &"Attacking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.63, 0)
-scale = Vector2(2, 2)
+position = Vector2(0.52, 0)
 shape = SubResource("CircleShape2D_ekiou")
 
 [node name="Attack" type="RayCast2D" parent="."]
-rotation = -1.5708
-target_position = Vector2(-2.79753e-06, 64)
+position = Vector2(-9.26, 0)
+target_position = Vector2(128, 0)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("5_7xhyc")

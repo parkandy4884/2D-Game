@@ -403,8 +403,8 @@ position = Vector2(3, -31)
 shape = SubResource("53")
 
 [node name="Attack" type="RayCast2D" parent="."]
-position = Vector2(0, -50)
-target_position = Vector2(151, 47)
+position = Vector2(0, -1.515)
+target_position = Vector2(123, 0)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4")
@@ -416,7 +416,7 @@ script = ExtResource("7")
 script = ExtResource("8")
 
 [node name="Timer" type="Timer" parent="StateMachine/Attack"]
-wait_time = 2.25
+wait_time = 0.8
 one_shot = true
 
 [node name="Die" type="Node" parent="StateMachine"]

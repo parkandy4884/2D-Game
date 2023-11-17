@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dpav3qaw186sa"]
+[gd_scene load_steps=17 format=3 uid="uid://dpav3qaw186sa"]
 
 [ext_resource type="Texture2D" uid="uid://g5gthcwiwq6x" path="res://cave_tileset1.png" id="1_g3n4k"]
 [ext_resource type="Script" path="res://Player/PlayerContianer_2.gd" id="2_bxv7l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Camera.gd" id="5_gix82"]
 [ext_resource type="Script" path="res://Exit_to_2.gd" id="6_3uveu"]
 [ext_resource type="Texture2D" uid="uid://ivg5g4pgsqvu" path="res://Assets/portal_end.png" id="7_yrqv1"]
+[ext_resource type="PackedScene" uid="uid://c3dtg3fth0whm" path="res://UI/Menu.tscn" id="8_csou1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahtb3"]
 texture = ExtResource("1_g3n4k")
@@ -1136,5 +1137,9 @@ texture = ExtResource("7_yrqv1")
 position = Vector2(7264, 1056)
 scale = Vector2(2.0625, 2.0625)
 polygon = PackedVector2Array(-0.000244141, 15.5152, 31.03, -15.5151, 15.5149, -77.5758, -15.5154, -93.0909, -31.0305, -62.0606, -31.0305, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="UI" instance=ExtResource("8_csou1")]
 
 [connection signal="body_entered" from="Exit_to_3" to="Exit_to_3" method="_on_body_entered"]

@@ -168,13 +168,12 @@ sprite_frames = SubResource("SpriteFrames_qiytq")
 animation = &"Attacking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.9, 1.98)
-scale = Vector2(1.515, 2.11)
+position = Vector2(2.38419e-07, -1.19209e-07)
+scale = Vector2(1.13, 2.11)
 shape = SubResource("RectangleShape2D_5fug0")
 
 [node name="Attack" type="RayCast2D" parent="."]
-rotation = -1.5708
-target_position = Vector2(-2.79753e-06, 64)
+target_position = Vector2(64, 0)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("5_cjv38")
