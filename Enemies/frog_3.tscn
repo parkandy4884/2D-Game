@@ -1,9 +1,9 @@
 [gd_scene load_steps=30 format=3 uid="uid://riniig6wy2sk"]
 
 [ext_resource type="Script" path="res://Enemies/frog_3.gd" id="1_eem7y"]
-[ext_resource type="Texture2D" uid="uid://c0inj5xdgkab4" path="res://frog_attack.png" id="2_shqf8"]
-[ext_resource type="Texture2D" uid="uid://b7g5dlhecn6lr" path="res://frog_die.png" id="3_4i7us"]
-[ext_resource type="Texture2D" uid="uid://tu414u0vwbh5" path="res://frog_move.png" id="4_bmveq"]
+[ext_resource type="Texture2D" uid="uid://lxdw6qjkgwew" path="res://frog_attack.png" id="2_shqf8"]
+[ext_resource type="Texture2D" uid="uid://3pgthba642ft" path="res://frog_die.png" id="3_4i7us"]
+[ext_resource type="Texture2D" uid="uid://xkhi40om1cdi" path="res://frog_move.png" id="4_bmveq"]
 [ext_resource type="Script" path="res://StateMachine/StateMachine.gd" id="5_cjv38"]
 [ext_resource type="Script" path="res://Enemies/Frog_Move.gd" id="6_70m38"]
 [ext_resource type="Script" path="res://Enemies/Frog_Attack.gd" id="7_fapbd"]
@@ -163,9 +163,10 @@ size = Vector2(20, 32)
 script = ExtResource("1_eem7y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(42, 0)
+position = Vector2(-37, -32)
 sprite_frames = SubResource("SpriteFrames_qiytq")
-animation = &"Attacking"
+animation = &"Dying"
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.38419e-07, -1.19209e-07)
@@ -185,7 +186,6 @@ script = ExtResource("6_70m38")
 script = ExtResource("7_fapbd")
 
 [node name="Timer" type="Timer" parent="StateMachine/Attack"]
-wait_time = 2.25
 one_shot = true
 
 [node name="Die" type="Node" parent="StateMachine"]
