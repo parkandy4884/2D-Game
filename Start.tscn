@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccoknx34mkofc"]
+[gd_scene load_steps=4 format=3 uid="uid://ccoknx34mkofc"]
 
-[ext_resource type="Texture2D" uid="uid://b6y33e5bxq1f1" path="res://Startmenu.png" id="1_a5aps"]
+[ext_resource type="Texture2D" uid="uid://bfuxhmlvf084e" path="res://Startmenu.png" id="1_a5aps"]
 [ext_resource type="Script" path="res://Start.gd" id="1_ccxdd"]
+[ext_resource type="AudioStream" uid="uid://qy7vtbl1qmy5" path="res://onlymp3.to -  판타지 느낌의 BGM 모음 저작권 표시없는 노래 노래다운은 오디오라이브러리 -5v8eQXFk-oo-192k-1700949007-[AudioTrimmer.com].mp3" id="3_ci3xt"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -40,6 +41,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ci3xt")
+volume_db = 1.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

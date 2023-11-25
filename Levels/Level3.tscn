@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://betqvfyxjihfp"]
+[gd_scene load_steps=17 format=3 uid="uid://betqvfyxjihfp"]
 
 [ext_resource type="Texture2D" uid="uid://g5gthcwiwq6x" path="res://cave_tileset1.png" id="1_jf7rg"]
 [ext_resource type="Texture2D" uid="uid://bja4bx035jwsi" path="res://Assets/tilesheet_complete_2X.png" id="2_4frh1"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Camera.gd" id="4_lhw4n"]
 [ext_resource type="PackedScene" uid="uid://dhidbv05dsn63" path="res://Enemies/mud_shack.tscn" id="5_4brbi"]
 [ext_resource type="Script" path="res://Exit_to_2.gd" id="5_5c67u"]
+[ext_resource type="AudioStream" uid="uid://b8ohpsl72os0i" path="res://onlymp3.to - Vol.32 물방울 떨어지는 소리 Water Drop Drip Sound Effects 무료 효과음 다운로드-CHST2nrRsFk-192k-1700949783-[AudioTrimmer.com].mp3" id="5_njuko"]
+[ext_resource type="AudioStream" uid="uid://d1b7ttlnum3e0" path="res://onlymp3.to -  무료 브금 Keep going 웅장한 긴장 판타지 음악 Royalty Free -ZhvDwyS7vgk-192k-1700951324.mp3" id="6_ejg78"]
 [ext_resource type="Texture2D" uid="uid://ivg5g4pgsqvu" path="res://Assets/portal_end.png" id="6_st1jk"]
 [ext_resource type="PackedScene" uid="uid://c3dtg3fth0whm" path="res://UI/Menu.tscn" id="8_akvhj"]
 
@@ -4549,6 +4551,16 @@ script = ExtResource("3_66uwx")
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
 script = ExtResource("4_lhw4n")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera"]
+stream = ExtResource("5_njuko")
+volume_db = -4.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Camera"]
+stream = ExtResource("6_ejg78")
+volume_db = 3.0
+autoplay = true
 
 [node name="Exit_to_4" type="Area2D" parent="."]
 script = ExtResource("5_5c67u")

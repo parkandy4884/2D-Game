@@ -1,9 +1,9 @@
 [gd_scene load_steps=31 format=3 uid="uid://dhidbv05dsn63"]
 
 [ext_resource type="Script" path="res://Enemies/mud_shack.gd" id="1_fuk0t"]
-[ext_resource type="Texture2D" uid="uid://1cramb4ue77b" path="res://mudshack_attack.png" id="1_uh44r"]
-[ext_resource type="Texture2D" uid="uid://wndmhmcnfkie" path="res://mudshack_die.png" id="2_43yjm"]
-[ext_resource type="Texture2D" uid="uid://vjx3suk8nhtg" path="res://mudshack.png" id="3_lq4wp"]
+[ext_resource type="Texture2D" uid="uid://dxlkn6im5pax7" path="res://mudshack_attack.png" id="1_uh44r"]
+[ext_resource type="Texture2D" uid="uid://wi26j6d77eos" path="res://mudshack_die.png" id="2_43yjm"]
+[ext_resource type="Texture2D" uid="uid://cptxmcj1axi66" path="res://mudshack.png" id="3_lq4wp"]
 [ext_resource type="Script" path="res://StateMachine/StateMachine.gd" id="4_lh6uc"]
 [ext_resource type="Script" path="res://Enemies/Shack_Move.gd" id="6_a3hnl"]
 [ext_resource type="Script" path="res://Enemies/shack_attack.gd" id="7_3lykq"]
