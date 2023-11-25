@@ -5,6 +5,7 @@ extends Node
 @onready var state_name = ""
 
 func _ready():
+	await owner.ready
 	if get_child_count():
 		set_state(get_children()[0].name)
 

@@ -7,7 +7,7 @@ func _ready():
 	await enemy.ready
 
 func start():
-	enemy.set_animation("Dying")
+	enemy.set_animation("Dying",Vector2(-3,3))
 	enemy.velocity = Vector2.ZERO
 	enemy.collision_layer = 0
 	enemy.collision_mask = 0
