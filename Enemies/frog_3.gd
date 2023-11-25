@@ -6,11 +6,14 @@ extends CharacterBody2D
 @export var running = 1000
 @export var path = [Vector2(1450,1030), Vector2(2900,1030)]
 var direction = 1
+@onready var default_position = $AnimatedSprite2D.position
 
 func _ready():
 	position = path[0]
 	velocity.x = walking
 	SM.set_state("Move")
+	
+	
 
 func _physics_process(_delta):
 	move_and_slide()
@@ -23,13 +26,12 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.flip_h = false
 		direction = 1
 		$Attack.target_position.x = abs($Attack.target_position.x)
-	if $AnimatedSprite2D.animation == "Attack": $AnimatedSprite2D.offset.x = 7*direction
-	else: $AnimatedSprite2D.offset.x = 0
 	
-func set_animation(anim):
+func set_animation(anim, off=Vector2.ZERO):
 	if $AnimatedSprite2D.animation == anim and $AnimatedSprite2D.is_playing(): return
 	if $AnimatedSprite2D.sprite_frames.has_animation(anim): $AnimatedSprite2D.play(anim)
 	else: $AnimatedSprite2D.play()
+	$AnimatedSprite2D.position = off + default_position
 
 func damage():
 	if SM.state_name != "Die":
